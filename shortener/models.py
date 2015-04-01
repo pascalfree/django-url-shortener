@@ -7,7 +7,7 @@ class Link(models.Model):
     """
     Model that represents a shortened URL
     """
-    url = models.CharField(max_length=255)
+    url = models.URLField()
     date_submitted = models.DateTimeField(auto_now_add=True)
     usage_count = models.PositiveIntegerField(default=0)
 
