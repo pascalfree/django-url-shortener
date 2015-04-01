@@ -1,7 +1,0 @@
-{% if link_form %}
-  <form name="url_form" action="{% url submit %}" method="post">
-    {% csrf_token %}
-    {{ link_form.as_p }}
-    <input type="submit" value="Shorten" />
-  </form>
-{% endif %}
