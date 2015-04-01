@@ -1,10 +1,11 @@
 from django.contrib import admin
 
-from shortener.models import Link
+from .models import Link
 
 
 class LinkAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('url', 'short_url_admin', 'date_submitted')
+    readonly_fields = ('usage_count',)
 
 
 admin.site.register(Link, LinkAdmin)

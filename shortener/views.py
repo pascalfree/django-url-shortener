@@ -3,8 +3,8 @@ from django.http import HttpResponsePermanentRedirect
 from django.shortcuts import get_object_or_404
 from django.views.decorators.http import require_GET
 
-from shortener.baseconv import base62
-from shortener.models import Link
+from .baseconv import base62
+from .models import Link
 
 
 @require_GET
