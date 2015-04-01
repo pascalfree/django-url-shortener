@@ -1,9 +1,5 @@
 from setuptools import setup, find_packages
 
-import url_shortener
-import os
-import urllib
-
 setup(
     name = "url_shortener",
     packages = find_packages(),
