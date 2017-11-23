@@ -15,12 +15,8 @@ class Link(models.Model):
     def short_url(self):
         return reverse('shortener.views.follow', args=(self.to_base62(),))
 
-    def short_url_admin(self):
-        return '<a href="%s" target="_blank"><b>%s</b></a>' % (self.short_url, self.short_url)
-    short_url_admin.allow_tags = True
-
     def to_base62(self):
-        return base62.from_decimal(self.id)
+        return base62.from_decimal(self.pk)
 
     def __unicode__(self):
-        return  '%s : %s' % (self.to_base62(), self.url)
+        return '%s : %s' % (self.to_base62(), self.url)
