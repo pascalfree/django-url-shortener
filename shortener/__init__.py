@@ -1,6 +1,7 @@
 VERSION = (0, 1, 1, "final", 0)
 
-VERSION_STR = unicode(".".join(map(lambda i:"%02d" % (i,), VERSION[:2])))
+VERSION_STR = ".".join(["%02d" % (i,) for i in VERSION[:2]])
+
 
 def get_version():
     version = '%s.%s' % (VERSION[0], VERSION[1])

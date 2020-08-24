@@ -41,7 +41,7 @@ class BaseConverter(object):
         return self.convert(i, self.decimal_digits, self.digits)
 
     def to_decimal(self, s):
-        if not isinstance(s, basestring):
+        if not isinstance(s, str):
             raise DecodingError('%s is not a basestring()' % s)
         for index, char in enumerate(s):
             if char not in self.digits and not char == '-' and not index == 0:
@@ -76,4 +76,4 @@ class BaseConverter(object):
         return res
 
 
-base62 = BaseConverter(string.digits + string.letters)
+base62 = BaseConverter(string.digits + string.ascii_letters)

@@ -5,3 +5,6 @@
 settings_local.py
 dist
 *.egg-info
+venv
+*.db
+*.bak
